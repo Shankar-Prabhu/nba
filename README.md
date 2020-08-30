@@ -32,7 +32,7 @@ The overall correct classification rate on the test data was **67.1%**. The conf
 
 If the predicted probability was greater than 0.5, it was labeled as a "predicted home win". 
 
-Overall, the classification accuracy is decent, compared to a baseline of 60% (if we just predicted the home team wins always). We can also see that the final accuracy is similar to numbers discuss in [this analysis] (https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf).
+Overall, the classification accuracy is decent, compared to a baseline of 60% (if we just predicted the home team wins always). We can also see that the final accuracy is similar to numbers discuss in [this analysis](https://homepages.cae.wisc.edu/~ece539/fall13/project/AmorimTorres_rpt.pdf).
 
 ## Problems/Next Steps
 The key problems are involved in not having player-level data since the model only accounts for game-level data. For example, I did not pull data on who was injured, what trades had happened, who had been drafted, etc. The model tends to perform poorly at the beginning of the season or after the NBA trade deadline, since the past information used as prediction is no longer relevant.
