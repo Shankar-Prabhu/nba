@@ -7,16 +7,24 @@ This data was scraped from http://basketball-reference.com/. This [tutorial](htt
 ## Additional Features
 The end goal is to predict whether or not the home team will win - essentially, a classification problem. I set up my "label" to be 1 if the home team recorded a win, and 0 if not. After this I needed to create a few more features to add predictive power to the model.
 **home_pt_diff**: Average Points Scored - Average Points Allowed over the last 10 games for the home team
+
 **visit_pt_diff**: Average Points Scored - Average Points Allowed over the last 10 games for the visiting team
+
 **home_wl_perc**: Win-Loss percentage over the last 10 games for the home team
+
 **visit_wl_perc**: Win-Loss percentage over the last 10 games for the visiting team
+
 **visit_wl_as_visitor**: Win-Loss percentage for the visiting team over the last 10 games that they played as the visitor (meant to capture whether the team is good/bad on the road)
+
 **home_wl_as_visitor**: Win-Loss percentage for the home team over the last 10 games that they played as the home team (meant to capture whether the team is good/bad at home)
+
 **home_play_yes/visit_play_yes**: 1 if the team played yesterday, 0 if not
+
 **home_3_in_4/visit_3_in_4**: 1 if the team played 3 games in the past four days, 0 if not
+
 **home_2_in_3/visit_2_in_3**: 1 if the team played 2 games in the past three days, 0 if not
 
-The play_yes/3_in_4/2_in_3 features are meant to capture how tired the team will be when playing their current game.
+The play_yes, 3_in_4, and 2_in_3 features are meant to capture how tired the team will be when playing their current game.
 
 ## Process
 After generating a dataset with features, I used an 80/20 train-test split for the data. I then implemented a logistic regression model to predict the probability that the home team would win. This model was selected because I hope to see if it can be used for sports betting in the future, but I have not reached that point yet.
